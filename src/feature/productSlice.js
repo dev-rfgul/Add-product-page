@@ -7,7 +7,8 @@ const initialState = {
       name: "Product 1",
       description: "This is product 1",
       price: 100,
-      imageUrl: "https://2-react-hero-section.vercel.app/images/profile-pic2.png",
+      imageUrl:
+        "https://2-react-hero-section.vercel.app/images/profile-pic2.png",
     },
   ],
 };
@@ -19,18 +20,21 @@ export const productSlice = createSlice({
     addProduct: (state, action) => {
       const product = {
         id: nanoid(),
+        imageUrl: action.payload.imageUrl,
         name: action.payload.name,
         description: action.payload.description,
         price: action.payload.price,
-        imageUrl: action.payload.imageUrl,
       };
+      console.log(product);
       state.products.push(product);
     },
-    removeProduct: (state, action) => {
-      state.products = state.products.filter(
-        (product) => product.id !== action.payload.id
-      );
-    },
+     removeProduct: (state, action) => {
+       state.products = state.products.filter(
+         (product) => product.id !== action.payload
+       );
+     },
+
+   
   },
 });
 
