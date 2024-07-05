@@ -7,7 +7,7 @@ const initialState = {
       name: "Product 1",
       description: "This is product 1",
       price: 100,
-      imageUrl: "https://via.placeholder.com/150",
+      imageUrl: "https://2-react-hero-section.vercel.app/images/profile-pic2.png",
     },
   ],
 };
@@ -22,7 +22,7 @@ export const productSlice = createSlice({
         name: action.payload.name,
         description: action.payload.description,
         price: action.payload.price,
-        ImageUrl: action.payload.imageUrl,
+        imageUrl: action.payload.imageUrl,
       };
       state.products.push(product);
     },

@@ -16,7 +16,7 @@ const Product = () => {
                   {
                     <img
                       className="h-48 w-full object-cover md:w-48"
-                      src={product.ImgUrl}
+                      src={product.imageUrl}
                     />
                   }
                 </div>
