@@ -4,7 +4,7 @@ import AddProduct from './Components/AddProduct'
 
 const App = () => {
   return (
-    <div>
+    <div >
       <AddProduct/>
       <Product/>
     </div>
